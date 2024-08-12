@@ -20,10 +20,10 @@ def food_main():
             if not ff.fast_food():
                 st.write("다시 선택해 주세요")
 
-           elif menu_number == '분식':
-               st.write("\"분식\"을 선택하셨네요!")
-               if not bs.bunsik():
-                st.write("다시 선택해 주세요")
+        elif menu_number == '분식':
+            st.write("\"분식\"을 선택하셨네요!")
+            if not bs.bunsik():
+             st.write("다시 선택해 주세요")
 
         else:
             st.write("잘못 입력하셨어요! 다시 선택해 주세요") 
