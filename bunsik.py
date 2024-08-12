@@ -31,17 +31,17 @@ def bunsik(): 			# 분식함수 정의
             if money >= rprice[k]:		# 예산과 메뉴 가격을 비교해서 예산에 맞는 메뉴 리스트 만들기
                 kk.append((rprice[k], bunsik[i]['menu'][k], bunsik[i]['name'], bunsik[i]['url']))
 
-    if kk:
-        kk.sort(key=lambda x: x[0])		# 예산에 맞는 메뉴를 가격의 올림차순으로 정렬
-        st.write("예산에 맞는 메뉴예요:")
-        st.write("*"*75)
-        for item in kk:					      # 예산에 맞는 메뉴를 ‘가격, 메뉴 이름, 음식점 이름, 주소’ 내용으로
-            print(f"{item[0]} \"{item[1]}\" {item[2]} {item[3]}")
-        st.write("*"*75)
-        available = True              # 예산에 맞는 메뉴를 찾았음을 표시
-
-    if available:
-        return True  					        # 예산에 맞는 메뉴를 찾으면 True값으로 반복문 빠져나감
-    else:
-        st.write("예산에 맞는 메뉴가 없어요")	# 예산에 맞는 메뉴가 없으면 False값으로 메인화면 선택으로 되돌아감
-        return False
+        if kk:
+            kk.sort(key=lambda x: x[0])		# 예산에 맞는 메뉴를 가격의 올림차순으로 정렬
+            st.write("예산에 맞는 메뉴예요:")
+            st.write("*"*75)
+            for item in kk:					      # 예산에 맞는 메뉴를 ‘가격, 메뉴 이름, 음식점 이름, 주소’ 내용으로
+                print(f"{item[0]} \"{item[1]}\" {item[2]} {item[3]}")
+            st.write("*"*75)
+            available = True              # 예산에 맞는 메뉴를 찾았음을 표시
+    
+        if available:
+            return True  					        # 예산에 맞는 메뉴를 찾으면 True값으로 반복문 빠져나감
+        else:
+            st.write("예산에 맞는 메뉴가 없어요")	# 예산에 맞는 메뉴가 없으면 False값으로 메인화면 선택으로 되돌아감
+            return False
